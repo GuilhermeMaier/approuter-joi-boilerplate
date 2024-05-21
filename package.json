@@ -1,0 +1,51 @@
+{
+  "name": "boilerplate-maier-solucoes",
+  "version": "0.1.0",
+  "description": "Boilerplate desenvolvido por Guilherme Maier",
+  "author": {
+    "name": "Guilherme Maier",
+    "url": "https://github.com/GuilhermeMaier",
+    "email": "guilherme.maier.dev@gmail.com"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuilhermeMaier/approuter-joi-boilerplate"
+  },
+  "scripts": {
+    "dev": "next dev -p 8001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/inter": "^5.0.17",
+    "@mui/joy": "^5.0.0-beta.32",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "typescript": "^5"
+  },
+  "keywords": [
+    "nextjs",
+    "approuter",
+    "typescript",
+    "boilerplate",
+    "joi",
+    "react",
+    "mui",
+    "material-ui",
+    "prettier"
+  ],
+  "license": "MIT"
+}
