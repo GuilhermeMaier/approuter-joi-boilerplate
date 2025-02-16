@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Typography } from "@mui/joy";
+import { Box, Button, Divider, Typography } from "@mui/material";
 import Link from "next/link";
 
 const Form = () => {
@@ -17,15 +17,10 @@ const Form = () => {
         textAlign={"center"}
         gap={2}
       >
-        <Typography level="title-md">Primária</Typography>
+        <Typography variant="h3">Primária</Typography>
         <Link href={"/home"}>
-          <Button variant="soft" color="primary" fullWidth>
-            Soft
-          </Button>
-        </Link>
-        <Link href={"/home"}>
-          <Button variant="plain" color="primary" fullWidth>
-            Plain
+          <Button variant="contained" color="primary" fullWidth>
+            Contained
           </Button>
         </Link>
         <Link href={"/home"}>
@@ -34,8 +29,8 @@ const Form = () => {
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="solid" color="primary" fullWidth>
-            Solid
+          <Button variant="text" color="primary" fullWidth>
+            Text
           </Button>
         </Link>
       </Box>
@@ -46,57 +41,68 @@ const Form = () => {
         textAlign={"center"}
         gap={2}
       >
-        <Typography level="title-md">Neutro</Typography>
+        <Typography variant="h3">Secundária</Typography>
         <Link href={"/home"}>
-          <Button variant="soft" color="neutral" fullWidth>
-            Soft
+          <Button variant="contained" color="secondary" fullWidth>
+            Contained
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="plain" color="neutral" fullWidth>
-            Plain
-          </Button>
-        </Link>
-        <Link href={"/home"}>
-          <Button variant="outlined" color="neutral" fullWidth>
+          <Button variant="outlined" color="secondary" fullWidth>
             Outlined
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="solid" color="neutral" fullWidth>
-            Solid
+          <Button variant="text" color="secondary" fullWidth>
+            Text
           </Button>
         </Link>
       </Box>
       <Divider orientation="vertical" />
-      <Divider />
       <Box
         display={"flex"}
         flexDirection={"column"}
         textAlign={"center"}
         gap={2}
       >
-        <Typography level="title-md" textColor={"text.primary"}>
-          Cuidado
-        </Typography>
+        <Typography variant="h3">Info</Typography>
         <Link href={"/home"}>
-          <Button variant="soft" color="warning" fullWidth>
-            Soft
+          <Button variant="contained" color="info" fullWidth>
+            Contained
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="plain" color="warning" fullWidth>
+          <Button variant="outlined" color="info" fullWidth>
             Plain
+          </Button>
+        </Link>
+        <Link href={"/home"}>
+          <Button variant="text" color="info" fullWidth>
+            Text
+          </Button>
+        </Link>
+      </Box>
+      <Divider orientation="vertical" />
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        textAlign={"center"}
+        gap={2}
+      >
+        <Typography variant="h3">Cuidado</Typography>
+        <Link href={"/home"}>
+          <Button variant="contained" color="warning" fullWidth>
+            Contained
           </Button>
         </Link>
         <Link href={"/home"}>
           <Button variant="outlined" color="warning" fullWidth>
-            Outlined
+            Plain
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="solid" color="warning" fullWidth>
-            Solid
+          <Button variant="text" color="warning" fullWidth>
+            Text
           </Button>
         </Link>
       </Box>
@@ -107,25 +113,20 @@ const Form = () => {
         textAlign={"center"}
         gap={2}
       >
-        <Typography level="title-md">Erro</Typography>
+        <Typography variant="h3">Erro</Typography>
         <Link href={"/home"}>
-          <Button variant="soft" color="danger" fullWidth>
-            Soft
+          <Button variant="contained" color="error" fullWidth>
+            Contained
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="plain" color="danger" fullWidth>
+          <Button variant="outlined" color="error" fullWidth>
             Plain
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="outlined" color="danger" fullWidth>
-            Outlined
-          </Button>
-        </Link>
-        <Link href={"/home"}>
-          <Button variant="solid" color="danger" fullWidth>
-            Solid
+          <Button variant="text" color="error" fullWidth>
+            Text
           </Button>
         </Link>
       </Box>
@@ -136,15 +137,10 @@ const Form = () => {
         textAlign={"center"}
         gap={2}
       >
-        <Typography level="title-md">Sucesso</Typography>
+        <Typography variant="h3">Sucesso</Typography>
         <Link href={"/home"}>
-          <Button variant="soft" color="success" fullWidth>
-            Soft
-          </Button>
-        </Link>
-        <Link href={"/home"}>
-          <Button variant="plain" color="success" fullWidth>
-            Plain
+          <Button variant="contained" color="success" fullWidth>
+            Contained
           </Button>
         </Link>
         <Link href={"/home"}>
@@ -153,8 +149,8 @@ const Form = () => {
           </Button>
         </Link>
         <Link href={"/home"}>
-          <Button variant="solid" color="success" fullWidth>
-            Solid
+          <Button variant="text" color="success" fullWidth>
+            Text
           </Button>
         </Link>
       </Box>

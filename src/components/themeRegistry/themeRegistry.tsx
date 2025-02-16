@@ -1,24 +1,20 @@
 "use client";
-import { CssBaseline } from "@mui/joy";
-import { CssVarsProvider, getInitColorSchemeScript } from "@mui/joy/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
-import NextAppDirEmotionCacheProvider from "./emotionCache";
-import theme from "./theme";
+import { theme } from "./theme";
 import ThemeToggle from "./themeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function ThemeRegistry({ children }: { children: ReactNode }) {
   return (
-    <NextAppDirEmotionCacheProvider options={{ key: "joy" }}>
-      <CssVarsProvider theme={theme} defaultMode="system">
-        <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <CssBaseline enableColorScheme />
+      <body className={inter.className}>
         <ThemeToggle />
-        <body className={inter.className}>
-          {getInitColorSchemeScript({ defaultMode: "system" })}
-          {children}
-        </body>
-      </CssVarsProvider>
-    </NextAppDirEmotionCacheProvider>
+        {children}
+      </body>
+    </ThemeProvider>
   );
 }

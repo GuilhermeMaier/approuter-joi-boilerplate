@@ -1,13 +1,15 @@
 "use client";
-import { IconButton, Switch, Tooltip, switchClasses } from "@mui/joy";
-import { useColorScheme } from "@mui/joy/styles";
+import { BrightnessHigh, DarkMode } from "@mui/icons-material";
+import { IconButton, Switch, Tooltip, useColorScheme } from "@mui/material";
 import { useEffect, useState } from "react";
-import { MdBrightnessHigh, MdDarkMode } from "react-icons/md";
-("react-icons/md");
 
 export default function ThemeToggle() {
   const { mode, setMode } = useColorScheme();
   const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    console.log("mode", mode);
+  }, [mode]);
 
   useEffect(() => {
     setMounted(true);
@@ -18,43 +20,59 @@ export default function ThemeToggle() {
   }
 
   return (
-    <Tooltip title={"Esquema de cores"} arrow size="sm">
+    <Tooltip title={"Esquema de cores"} arrow>
       <Switch
         sx={{
           position: "fixed",
           top: "4px",
           right: "4px",
-          "--Switch-thumbSize": "21px",
-          "--Switch-trackWidth": "45px",
-          "--Switch-trackHeight": "25px",
-          [`& .${switchClasses.thumb}`]: {
-            transition: "width 0.2s, left 0.2s",
+          paddingX: "10px",
+          paddingY: "8px",
+          "& .MuiSwitch-switchBase": {
+            marginLeft: "6px",
+            marginRight: "8px",
+            marginY: "10px",
+            padding: 0,
+            transform: "translateX(6px)",
+            "&.Mui-checked": {
+              transform: "translateX(22px)",
+              "& + .MuiSwitch-track": {
+                opacity: 1,
+              },
+            },
+          },
+          "& .MuiSwitch-thumb": {
+            width: 32,
+            height: 32,
+            "&::before": {
+              content: "''",
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              left: 0,
+              top: 0,
+            },
+          },
+          "& .MuiSwitch-track": {
+            opacity: 1,
+            borderRadius: 20 / 2,
           },
         }}
-        slotProps={{
-          thumb: {
-            children:
-              mode === "light" ? (
-                <IconButton
-                  color="warning"
-                  sx={{ pointerEvents: "none", padding: 0 }}
-                >
-                  <MdBrightnessHigh />
-                </IconButton>
-              ) : (
-                <IconButton
-                  color="primary"
-                  sx={{ pointerEvents: "none", padding: 0 }}
-                >
-                  <MdDarkMode />
-                </IconButton>
-              ),
-          },
-        }}
-        checked={mode === "light"}
-        onChange={({ target: { checked } }) =>
-          setMode(checked === true ? "light" : "dark")
+        checkedIcon={
+          <IconButton size="small" color="warning" sx={{ padding: 0 }}>
+            <BrightnessHigh />
+          </IconButton>
         }
+        icon={
+          <IconButton size="small" color="primary" sx={{ padding: 0 }}>
+            <DarkMode />
+          </IconButton>
+        }
+        checked={mode === "light"}
+        onChange={({ target: { checked } }) => {
+          console.log("entrou", checked);
+          setMode(checked === true ? "light" : "dark");
+        }}
       />
     </Tooltip>
   );

@@ -1,4 +1,4 @@
-import { Box, Button, Card } from "@mui/joy";
+import { Box, Button, Card } from "@mui/material";
 import Link from "next/link";
 
 const Home = () => {
@@ -9,11 +9,9 @@ const Home = () => {
       height={"100vh"}
       alignItems={"center"}
     >
-      <Card variant="plain">
+      <Card variant="outlined">
         <Link href={"/form"}>
-          <Button variant="solid" color="primary">
-            Vá até o formulário
-          </Button>
+          <Button color="primary">Vá até o formulário</Button>
         </Link>
       </Card>
     </Box>

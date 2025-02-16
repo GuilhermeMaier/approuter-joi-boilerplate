@@ -13,16 +13,18 @@
     "url": "https://github.com/GuilhermeMaier/approuter-joi-boilerplate"
   },
   "scripts": {
-    "dev": "next dev -p 8001",
+    "dev": "next dev -p 8002",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fontsource/inter": "^5.0.17",
-    "@mui/joy": "^5.0.0-beta.32",
+    "@fontsource/roboto": "^5.1.1",
+    "@mui/icons-material": "^6.4.4",
+    "@mui/material": "^6.4.4",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
@@ -41,7 +43,6 @@
     "approuter",
     "typescript",
     "boilerplate",
-    "joi",
     "react",
     "mui",
     "material-ui",
