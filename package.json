@@ -10,7 +10,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/GuilhermeMaier/approuter-joi-boilerplate"
+    "url": "https://github.com/GuilhermeMaier/approuter-material-boilerplate"
   },
   "scripts": {
     "dev": "next dev -p 8002",
